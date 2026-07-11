@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>슈가맨워크 수지성복점 | 프리미엄 공유오피스</title>
+<meta name="description" content="성복역 인근 프리미엄 공유오피스 슈가맨워크 수지성복점. 개인 사무실, 회의실, 라운지, 스튜디오 완비. 즉시 입주 가능. 문의 0507-1494-2038">
+<meta property="og:title" content="슈가맨워크 수지성복점 | 프리미엄 공유오피스">
+<meta property="og:description" content="성복역 인근 프리미엄 공유오피스. 개인 사무실·회의실·라운지·스튜디오 완비. 즉시 입주 가능.">
+<meta property="og:image" content="images/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+  :root{
+    --cream:#FBF7F0;
+    --cream-2:#F3EBDF;
+    --sand:#EFE6D6;
+    --wood:#B8935E;
+    --wood-dark:#977544;
+    --gold:#C29A4B;
+    --pink:#E4C4BE;
+    --lav:#C6BFD6;
+    --blue:#A9C4CE;
+    --ink:#3A342E;
+    --ink-soft:#6E655A;
+    --line:#E7DDCB;
+    --white:#ffffff;
+    --shadow:0 18px 50px -20px rgba(58,52,46,.35);
+    --radius:20px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Pretendard","Pretendard Variable",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    letter-spacing:-.01em;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+  section{padding:110px 0}
+  .eyebrow{
+    display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.18em;
+    color:var(--wood-dark);text-transform:uppercase;margin-bottom:16px;
+  }
+  h2.title{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:800;line-height:1.25;letter-spacing:-.03em}
+  .lead{color:var(--ink-soft);font-size:1.08rem;margin-top:18px;max-width:620px}
+
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:1rem;
+    padding:14px 26px;border-radius:999px;transition:.25s;cursor:pointer;border:none;
+  }
+  .btn svg{width:19px;height:19px}
+  .btn-call{background:var(--ink);color:#fff}
+  .btn-call:hover{background:#241f1a;transform:translateY(-2px)}
+  .btn-sms{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+  .btn-sms:hover{border-color:var(--wood);color:var(--wood-dark);transform:translateY(-2px)}
+  .btn-gold{background:var(--gold);color:#fff}
+  .btn-gold:hover{background:var(--wood-dark);transform:translateY(-2px)}
+
+  /* header */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(251,247,240,.82);backdrop-filter:blur(14px);
+    border-bottom:1px solid transparent;transition:.3s;
+  }
+  header.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px -18px rgba(58,52,46,.5)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:baseline;gap:10px;font-weight:800;font-size:1.18rem;letter-spacing:.02em}
+  .brand .mark{color:var(--wood-dark)}
+  .brand small{font-size:.74rem;font-weight:600;color:var(--ink-soft);letter-spacing:0}
+  .nav-links{display:flex;gap:30px;font-weight:600;font-size:.96rem;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .nav-phone{font-weight:800;font-size:1.02rem;color:var(--ink);display:flex;align-items:center;gap:7px}
+  .nav-phone svg{width:17px;height:17px;color:var(--wood-dark)}
+  @media(max-width:900px){.nav-links{display:none}.nav-phone span{display:none}}
+
+  /* hero */
+  .hero{
+    position:relative;min-height:100vh;display:flex;align-items:center;
+    color:#fff;padding-top:72px;overflow:hidden;
+  }
+  .hero-bg{position:absolute;inset:0;z-index:-2}
+  .hero-bg img{width:100%;height:100%;object-fit:cover}
+  .hero-bg::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(105deg,rgba(38,32,26,.78) 0%,rgba(38,32,26,.5) 45%,rgba(38,32,26,.18) 100%);}
+  .hero-inner{max-width:660px}
+  .hero .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.28);padding:8px 16px;border-radius:999px;font-size:.85rem;font-weight:600;margin-bottom:26px;backdrop-filter:blur(6px)}
+  .hero h1{font-size:clamp(2.3rem,5.6vw,3.9rem);font-weight:800;line-height:1.18;letter-spacing:-.035em}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero p{font-size:1.15rem;margin-top:22px;color:rgba(255,255,255,.9);max-width:520px}
+  .hero-cta{display:flex;gap:12px;margin-top:38px;flex-wrap:wrap}
+  .hero .btn-sms{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.4)}
+  .hero .btn-sms:hover{background:rgba(255,255,255,.25);color:#fff}
+  .hero-scroll{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.7);font-size:.8rem;letter-spacing:.15em;display:flex;flex-direction:column;align-items:center;gap:8px}
+  .hero-scroll span{width:1px;height:34px;background:rgba(255,255,255,.5);animation:drop 1.8s infinite}
+  @keyframes drop{0%{opacity:0;transform:scaleY(.3)}50%{opacity:1}100%{opacity:0;transform:scaleY(1) translateY(10px)}}
+
+  /* stats strip */
+  .strip{background:var(--ink);color:#fff;padding:0}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:46px;padding-bottom:46px}
+  .stat{text-align:center}
+  .stat b{display:block;font-size:2rem;font-weight:800;color:var(--gold);letter-spacing:-.02em}
+  .stat span{font-size:.92rem;color:rgba(255,255,255,.72)}
+  @media(max-width:700px){.strip .wrap{grid-template-columns:repeat(2,1fr);gap:30px 20px}}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .about-media{position:relative}
+  .about-media img{border-radius:var(--radius);box-shadow:var(--shadow);width:100%;aspect-ratio:4/3;object-fit:cover}
+  .about-media .float{position:absolute;bottom:-26px;left:-26px;background:#fff;border-radius:16px;padding:18px 22px;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .about-media .float b{font-size:1.4rem;color:var(--wood-dark)}
+  .about-media .float span{font-size:.85rem;color:var(--ink-soft)}
+  @media(max-width:820px){.about-grid{grid-template-columns:1fr;gap:52px}.about-media .float{left:16px;bottom:-20px}}
+
+  /* features */
+  .features{background:linear-gradient(180deg,var(--cream) 0%,#F6EFE3 100%)}
+  .feat-head{text-align:center;max-width:640px;margin:0 auto 60px}
+  .feat-head .lead{margin-left:auto;margin-right:auto}
+  .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .feat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;transition:.25s}
+  .feat:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+  .feat .ic{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;background:var(--sand);color:var(--wood-dark)}
+  .feat .ic svg{width:26px;height:26px}
+  .feat h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+  .feat p{font-size:.93rem;color:var(--ink-soft)}
+  @media(max-width:900px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.feat-grid{grid-template-columns:1fr}}
+
+  /* gallery */
+  .gal-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:38px}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap}
+  .tab{padding:9px 18px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:600;font-size:.92rem;color:var(--ink-soft);cursor:pointer;transition:.2s}
+  .tab:hover{border-color:var(--wood)}
+  .tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;grid-auto-flow:dense}
+  .cell{position:relative;overflow:hidden;border-radius:16px;cursor:pointer;aspect-ratio:4/3;background:var(--sand)}
+  .cell.tall{grid-row:span 2;aspect-ratio:auto}
+  .cell img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .cell:hover img{transform:scale(1.06)}
+  .cell .cap{position:absolute;inset:0;display:flex;align-items:flex-end;padding:16px;
+    background:linear-gradient(0deg,rgba(38,32,26,.6),transparent 55%);opacity:0;transition:.3s;color:#fff;font-weight:600;font-size:.92rem}
+  .cell:hover .cap{opacity:1}
+  @media(max-width:820px){.grid{grid-template-columns:repeat(2,1fr)}.cell.tall{grid-row:span 1;aspect-ratio:4/3}}
+
+  /* lightbox */
+  .lb{position:fixed;inset:0;z-index:100;background:rgba(28,23,18,.94);display:none;align-items:center;justify-content:center;padding:30px}
+  .lb.open{display:flex}
+  .lb img{max-width:92vw;max-height:86vh;border-radius:10px;box-shadow:0 30px 80px -20px #000}
+  .lb-close,.lb-nav{position:absolute;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;width:52px;height:52px;border-radius:50%;font-size:1.4rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s}
+  .lb-close:hover,.lb-nav:hover{background:rgba(255,255,255,.28)}
+  .lb-close{top:24px;right:24px}
+  .lb-nav.prev{left:24px;top:50%;transform:translateY(-50%)}
+  .lb-nav.next{right:24px;top:50%;transform:translateY(-50%)}
+  @media(max-width:600px){.lb-nav{width:44px;height:44px}}
+
+  /* location */
+  .location{background:#F6EFE3}
+  .loc-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .loc-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:38px;box-shadow:var(--shadow)}
+  .loc-row{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .loc-row:last-child{border-bottom:none}
+  .loc-row .ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--sand);color:var(--wood-dark);display:flex;align-items:center;justify-content:center}
+  .loc-row .ic svg{width:21px;height:21px}
+  .loc-row .k{font-size:.82rem;color:var(--ink-soft);font-weight:600}
+  .loc-row .v{font-size:1.05rem;font-weight:600}
+  .loc-btns{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+  .loc-media img{border-radius:var(--radius);box-shadow:var(--shadow);width:100%;aspect-ratio:3/4;object-fit:cover}
+  @media(max-width:820px){.loc-grid{grid-template-columns:1fr;gap:40px}.loc-media{order:-1}.loc-media img{aspect-ratio:4/3}}
+
+  /* CTA */
+  .cta{background:var(--ink);color:#fff;text-align:center;position:relative;overflow:hidden}
+  .cta::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(194,154,75,.35),transparent 70%);top:-160px;right:-120px}
+  .cta::after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(198,191,214,.25),transparent 70%);bottom:-160px;left:-100px}
+  .cta .wrap{position:relative}
+  .cta h2{font-size:clamp(1.9rem,4.5vw,2.9rem);font-weight:800;letter-spacing:-.03em}
+  .cta p{color:rgba(255,255,255,.78);margin-top:18px;font-size:1.1rem}
+  .cta-phone{font-size:clamp(2rem,6vw,3.2rem);font-weight:800;color:var(--gold);margin:26px 0 8px;letter-spacing:-.02em}
+  .cta-btns{display:flex;gap:12px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+  .cta .btn-sms{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.35)}
+  .cta .btn-sms:hover{background:rgba(255,255,255,.22);color:#fff}
+  .cta small{display:block;margin-top:22px;color:rgba(255,255,255,.55);font-size:.9rem}
+
+  /* footer */
+  footer{background:#26201a;color:rgba(255,255,255,.62);padding:54px 0 40px;font-size:.9rem}
+  .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+  .foot-brand{font-weight:800;font-size:1.15rem;color:#fff;margin-bottom:14px}
+  .foot-brand small{font-weight:600;font-size:.72rem;color:var(--gold);display:block;letter-spacing:.05em}
+  .foot-info p{margin:3px 0}
+  .foot-right{text-align:right}
+  .foot-right a{display:inline-flex;align-items:center;gap:7px;color:#fff;font-weight:700}
+  .foot-copy{margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:.82rem}
+  @media(max-width:640px){.foot-right{text-align:left}}
+
+  /* mobile sticky call bar */
+  .mbar{position:fixed;bottom:0;left:0;right:0;z-index:60;display:none;gap:0;background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 24px -14px rgba(58,52,46,.4)}
+  .mbar a{flex:1;text-align:center;padding:15px 0;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px}
+  .mbar a svg{width:18px;height:18px}
+  .mbar .c{background:var(--ink);color:#fff}
+  .mbar .s{color:var(--ink)}
+  @media(max-width:768px){.mbar{display:flex}body{padding-bottom:54px}}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="hd">
+  <div class="wrap nav">
+    <div class="brand"><span class="mark">SUGARMANWORK</span><small>수지성복점</small></div>
+    <nav class="nav-links">
+      <a href="#about">소개</a>
+      <a href="#features">시설·서비스</a>
+      <a href="#gallery">공간</a>
+      <a href="#location">오시는 길</a>
+    </nav>
+    <div class="nav-cta">
+      <span class="nav-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>0507-1494-2038</span></span>
+      <a class="btn btn-call" href="tel:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>전화 문의</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="images/hero.jpg" alt="슈가맨워크 수지성복점 라운지"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="badge">● 성복역 인근 · 즉시 입주 가능</span>
+      <h1>수지에서 가장 우아하게<br><em>일에 집중하는</em> 공간</h1>
+      <p>슈가맨워크 수지성복점. 프리미엄 인테리어와 완비된 시설로, 1인 창업가부터 팀까지 품격 있게 일할 수 있는 공유오피스입니다.</p>
+      <div class="hero-cta">
+        <a class="btn btn-call" href="tel:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>전화로 상담하기</a>
+        <a class="btn btn-sms" href="sms:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>문자로 문의하기</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">SCROLL<span></span></div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="wrap">
+    <div class="stat"><b>24시간</b><span>자유로운 출입</span></div>
+    <div class="stat"><b>즉시</b><span>입주 가능</span></div>
+    <div class="stat"><b>성복역</b><span>도보 접근</span></div>
+    <div class="stat"><b>All-in</b><span>풀옵션 완비</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-text reveal">
+      <span class="eyebrow">About Sugarmanwork</span>
+      <h2 class="title">일의 격을 높이는<br>프리미엄 공유오피스</h2>
+      <p class="lead">슈가맨워크 수지성복점은 스카이캐슬 주식회사가 운영하는 공유오피스입니다. 따뜻한 우드와 부드러운 파스텔 톤으로 꾸민 공간에서, 번거로운 준비 없이 노트북 하나만 들고 오늘 바로 일을 시작할 수 있습니다.</p>
+      <p class="lead">독립된 개인 사무실부터 회의실, 라운지, 촬영 스튜디오까지 — 성장하는 비즈니스에 필요한 모든 것을 한 곳에 담았습니다.</p>
+      <div class="hero-cta" style="margin-top:30px">
+        <a class="btn btn-gold" href="#gallery"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>공간 둘러보기</a>
+      </div>
+    </div>
+    <div class="about-media reveal">
+      <img src="images/lounge2.jpg" alt="슈가맨워크 라운지 공간">
+      <div class="float"><b>수지성복점</b><span>경기 용인시 수지구 성복2로 17</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="wrap">
+    <div class="feat-head reveal">
+      <span class="eyebrow">Facilities & Services</span>
+      <h2 class="title">필요한 모든 것이<br>이미 준비되어 있습니다</h2>
+      <p class="lead">별도의 인테리어나 집기 준비 없이, 입주 첫날부터 온전히 일에만 집중하세요.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>24시간 자유 출입</h3><p>개인 출입 시스템으로 밤낮 없이 언제든 자유롭게 이용할 수 있습니다.</p></div>
+      <div class="feat reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 13h.01M9 17h.01"/></svg></div><h3>독립 개인 사무실</h3><p>방음과 프라이버시를 갖춘 1~다인용 독립 사무실을 제공합니다.</p></div>
+      <div class="feat reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>회의실 이용</h3><p>화면과 화이트보드를 갖춘 회의실에서 미팅과 발표를 진행하세요.</p></div>
+      <div class="feat reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg></div><h3>초고속 인터넷</h3><p>전 공간 유·무선 초고속 인터넷으로 끊김 없는 업무 환경을 제공합니다.</p></div>
+      <div class="feat reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M12 3h8v8M20 3l-9 9"/></svg></div><h3>무인 택배실</h3><p>부재 중에도 안심할 수 있는 무인 택배 보관 공간을 운영합니다.</p></div>
+      <div class="feat reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div><h3>촬영 스튜디오</h3><p>제품·콘텐츠 촬영이 가능한 전용 스튜디오를 함께 이용할 수 있습니다.</p></div>
+      <div class="feat reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4zM6 1v3M10 1v3M14 1v3"/></svg></div><h3>라운지 & 카페</h3><p>커피 한 잔의 여유가 있는 라운지에서 휴식과 네트워킹을 즐기세요.</p></div>
+      <div class="feat reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2a2.5 2.5 0 0 1 2.5 2.5V12M12 12V4.5a2.5 2.5 0 0 1 5 0V12M5 12a2.5 2.5 0 0 1 5 0v3M5 15v3.5a2.5 2.5 0 0 0 5 0M12 12h5a2.5 2.5 0 0 1 0 5h-1"/></svg></div><h3>냉·난방 완비</h3><p>사계절 쾌적한 온도를 유지하는 개별 냉난방 시설을 갖췄습니다.</p></div>
+      <div class="feat reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></div><h3>즉시 입주</h3><p>복잡한 절차 없이 상담 후 바로 입주해 오늘부터 일을 시작하세요.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="gal-head">
+      <div class="reveal">
+        <span class="eyebrow">Space Gallery</span>
+        <h2 class="title">공간 둘러보기</h2>
+      </div>
+      <div class="tabs reveal">
+        <button class="tab active" data-f="all">전체</button>
+        <button class="tab" data-f="lounge">라운지</button>
+        <button class="tab" data-f="office">개인 사무실</button>
+        <button class="tab" data-f="meeting">회의실</button>
+        <button class="tab" data-f="studio">스튜디오</button>
+        <button class="tab" data-f="parcel">무인 택배실</button>
+        <button class="tab" data-f="space">부대공간</button>
+      </div>
+    </div>
+    <div class="grid" id="grid">
+      <div class="cell tall" data-cat="lounge"><img src="images/lounge1.jpg" alt="라운지"><div class="cap">라운지 · 공용 업무 공간</div></div>
+      <div class="cell" data-cat="office"><img src="images/office1.jpg" alt="개인 사무실"><div class="cap">개인 사무실</div></div>
+      <div class="cell" data-cat="meeting"><img src="images/meeting1.jpg" alt="회의실"><div class="cap">회의실</div></div>
+      <div class="cell" data-cat="lounge"><img src="images/lounge3.jpg" alt="라운지"><div class="cap">라운지</div></div>
+      <div class="cell tall" data-cat="office"><img src="images/office2.jpg" alt="개인 사무실"><div class="cap">개인 사무실</div></div>
+      <div class="cell" data-cat="studio"><img src="images/studio1.jpg" alt="촬영 스튜디오"><div class="cap">촬영 스튜디오</div></div>
+      <div class="cell" data-cat="lounge"><img src="images/lounge4.jpg" alt="라운지"><div class="cap">라운지</div></div>
+      <div class="cell" data-cat="meeting"><img src="images/meeting2.jpg" alt="회의실"><div class="cap">회의실</div></div>
+      <div class="cell" data-cat="office"><img src="images/office3.jpg" alt="개인 사무실"><div class="cap">개인 사무실</div></div>
+      <div class="cell tall" data-cat="lounge"><img src="images/lounge5.jpg" alt="라운지"><div class="cap">라운지 · 커뮤니티 공간</div></div>
+      <div class="cell" data-cat="office"><img src="images/office4.jpg" alt="개인 사무실"><div class="cap">개인 사무실</div></div>
+      <div class="cell" data-cat="studio"><img src="images/studio2.jpg" alt="촬영 스튜디오"><div class="cap">촬영 스튜디오</div></div>
+      <div class="cell" data-cat="meeting"><img src="images/meeting3.jpg" alt="회의실"><div class="cap">회의실</div></div>
+      <div class="cell" data-cat="office"><img src="images/office5.jpg" alt="개인 사무실"><div class="cap">개인 사무실</div></div>
+      <div class="cell" data-cat="space"><img src="images/entrance1.jpg" alt="입구"><div class="cap">입구 · 로비</div></div>
+      <div class="cell" data-cat="office"><img src="images/office6.jpg" alt="개인 사무실"><div class="cap">개인 사무실</div></div>
+      <div class="cell" data-cat="space"><img src="images/hall1.jpg" alt="복도"><div class="cap">복도</div></div>
+      <div class="cell" data-cat="parcel"><img src="images/parcel1.jpg" alt="무인 택배실"><div class="cap">무인 택배실</div></div>
+      <div class="cell" data-cat="parcel"><img src="images/parcel2.jpg" alt="무인 택배실"><div class="cap">무인 택배실</div></div>
+      <div class="cell" data-cat="space"><img src="images/entrance2.jpg" alt="입구"><div class="cap">입구</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location" id="location">
+  <div class="wrap loc-grid">
+    <div class="loc-info reveal">
+      <span class="eyebrow">Location</span>
+      <h2 class="title">오시는 길</h2>
+      <p class="lead" style="margin-bottom:30px">성복역 인근 수지골드프라자에 자리해 대중교통과 자가용 모두 편리합니다.</p>
+      <div class="loc-card">
+        <div class="loc-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="k">주소</div><div class="v">경기 용인시 수지구 성복2로 17<br>수지골드프라자 4층 202호</div></div>
+        </div>
+        <div class="loc-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="k">전화 문의</div><div class="v">0507-1494-2038</div></div>
+        </div>
+        <div class="loc-btns">
+          <a class="btn btn-gold" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기%20용인시%20수지구%20성복2로%2017">네이버 지도</a>
+          <a class="btn btn-sms" target="_blank" rel="noopener" href="https://map.kakao.com/?q=경기 용인시 수지구 성복2로 17">카카오맵</a>
+        </div>
+      </div>
+    </div>
+    <div class="loc-media reveal">
+      <img src="images/entrance1.jpg" alt="슈가맨워크 수지성복점 입구">
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--gold)">Contact</span>
+    <h2>지금 바로 상담받고<br>오늘부터 일해보세요</h2>
+    <p>공실 현황과 이용 안내는 전화 또는 문자로 편하게 문의해 주세요.</p>
+    <div class="cta-phone">0507-1494-2038</div>
+    <div class="cta-btns">
+      <a class="btn btn-gold" href="tel:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>전화 문의하기</a>
+      <a class="btn btn-sms" href="sms:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>문자 보내기</a>
+    </div>
+    <small>상담 후 방문(투어) 예약도 도와드립니다.</small>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-info">
+      <div class="foot-brand">SUGARMANWORK<small>수지성복점</small></div>
+      <p>스카이캐슬 주식회사</p>
+      <p>경기 용인시 수지구 성복2로 17 수지골드프라자 4층 202호</p>
+      <p>문의 0507-1494-2038</p>
+    </div>
+    <div class="foot-right">
+      <a href="tel:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>0507-1494-2038</a>
+    </div>
+  </div>
+  <div class="wrap foot-copy">© 2026 스카이캐슬 주식회사 (SKY CASTLE Inc.) · 슈가맨워크 수지성복점. All rights reserved.</div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mbar">
+  <a class="c" href="tel:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>전화 문의</a>
+  <a class="s" href="sms:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>문자 보내기</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb">
+  <button class="lb-close" id="lbClose">&times;</button>
+  <button class="lb-nav prev" id="lbPrev">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-nav next" id="lbNext">&#8250;</button>
+</div>
+
+<script>
+// header scroll
+const hd=document.getElementById('hd');
+addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>20));
+
+// reveal on scroll
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*60)+'ms';io.observe(el)});
+
+// gallery filter
+const tabs=document.querySelectorAll('.tab');
+const cells=[...document.querySelectorAll('.cell')];
+tabs.forEach(t=>t.addEventListener('click',()=>{
+  tabs.forEach(x=>x.classList.remove('active'));t.classList.add('active');
+  const f=t.dataset.f;
+  cells.forEach(c=>{c.style.display=(f==='all'||c.dataset.cat===f)?'':'none'});
+}));
+
+// lightbox
+const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg');
+let visible=[],idx=0;
+function openLb(cell){
+  visible=cells.filter(c=>c.style.display!=='none');
+  idx=visible.indexOf(cell);show();lb.classList.add('open');
+}
+function show(){lbImg.src=visible[idx].querySelector('img').src}
+cells.forEach(c=>c.addEventListener('click',()=>openLb(c)));
+document.getElementById('lbClose').onclick=()=>lb.classList.remove('open');
+document.getElementById('lbNext').onclick=(e)=>{e.stopPropagation();idx=(idx+1)%visible.length;show()};
+document.getElementById('lbPrev').onclick=(e)=>{e.stopPropagation();idx=(idx-1+visible.length)%visible.length;show()};
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open')});
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')lb.classList.remove('open');
+  if(e.key==='ArrowRight')document.getElementById('lbNext').click();
+  if(e.key==='ArrowLeft')document.getElementById('lbPrev').click();});
+</script>
+</body>
+</html>
