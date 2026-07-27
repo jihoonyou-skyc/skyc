@@ -56,6 +56,8 @@
     padding:14px 26px;border-radius:999px;transition:.25s;cursor:pointer;border:none;
   }
   .btn svg{width:19px;height:19px}
+  button.btn{font-family:inherit}
+  .btn.copied{background:var(--wood-dark);color:#fff;border-color:var(--wood-dark)}
   .btn-call{background:var(--ink);color:#fff}
   .btn-call:hover{background:#241f1a;transform:translateY(-2px)}
   .btn-sms{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
@@ -183,6 +185,7 @@
   .cta h2{font-size:clamp(1.9rem,4.5vw,2.9rem);font-weight:800;letter-spacing:-.03em}
   .cta p{color:rgba(255,255,255,.78);margin-top:18px;font-size:1.1rem}
   .cta-phone{font-size:clamp(2rem,6vw,3.2rem);font-weight:800;color:var(--gold);margin:26px 0 8px;letter-spacing:-.02em}
+  .cta-email{color:rgba(255,255,255,.82);font-size:1.05rem;font-weight:600;word-break:break-all}
   .cta-btns{display:flex;gap:12px;justify-content:center;margin-top:26px;flex-wrap:wrap}
   .cta .btn-sms{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.35)}
   .cta .btn-sms:hover{background:rgba(255,255,255,.22);color:#fff}
@@ -240,7 +243,7 @@
       <p>슈가맨워크 수지성복점. 프리미엄 인테리어와 완비된 시설로, 1인 창업가부터 팀까지 품격 있게 일할 수 있는 공유오피스입니다.</p>
       <div class="hero-cta">
         <a class="btn btn-call" href="tel:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>전화로 상담하기</a>
-        <a class="btn btn-sms" href="sms:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>문자로 문의하기</a>
+        <button type="button" class="btn btn-sms copy-mail" data-mail="sugarmanwork.sujiseongbok@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg><span>이메일 주소 복사</span></button>
       </div>
     </div>
   </div>
@@ -359,15 +362,19 @@
       <div class="loc-card">
         <div class="loc-row">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><div class="k">주소</div><div class="v">경기 용인시 수지구 성복2로 17<br>수지골드프라자 4층 202호</div></div>
+          <div><div class="k">주소</div><div class="v">경기 용인시 수지구 성복2로 17<br>수지골드프라자 4층</div></div>
         </div>
         <div class="loc-row">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
           <div><div class="k">전화 문의</div><div class="v">0507-1494-2038</div></div>
         </div>
+        <div class="loc-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg></div>
+          <div><div class="k">이메일 문의</div><div class="v">sugarmanwork.sujiseongbok@gmail.com</div></div>
+        </div>
         <div class="loc-btns">
-          <a class="btn btn-gold" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기%20용인시%20수지구%20성복2로%2017">네이버 지도</a>
-          <a class="btn btn-sms" target="_blank" rel="noopener" href="https://map.kakao.com/?q=경기 용인시 수지구 성복2로 17">카카오맵</a>
+          <a class="btn btn-gold" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EA%B3%B5%EC%9C%A0%EC%98%A4%ED%94%BC%EC%8A%A4%20%EC%8A%88%EA%B0%80%EB%A7%A8%EC%9B%8C%ED%81%AC%20%EC%88%98%EC%A7%80%EC%84%B1%EB%B3%B5%EC%97%AD%EC%A0%90">네이버 지도</a>
+          <a class="btn btn-sms" target="_blank" rel="noopener" href="https://map.kakao.com/?q=%EA%B3%B5%EC%9C%A0%EC%98%A4%ED%94%BC%EC%8A%A4%20%EC%8A%88%EA%B0%80%EB%A7%A8%EC%9B%8C%ED%81%AC%20%EC%88%98%EC%A7%80%EC%84%B1%EB%B3%B5%EC%97%AD%EC%A0%90">카카오맵</a>
         </div>
       </div>
     </div>
@@ -382,11 +389,12 @@
   <div class="wrap">
     <span class="eyebrow" style="color:var(--gold)">Contact</span>
     <h2>지금 바로 상담받고<br>오늘부터 일해보세요</h2>
-    <p>공실 현황과 이용 안내는 전화 또는 문자로 편하게 문의해 주세요.</p>
+    <p>공실 현황과 이용 안내는 전화 또는 이메일로 편하게 문의해 주세요.</p>
     <div class="cta-phone">0507-1494-2038</div>
+    <div class="cta-email">sugarmanwork.sujiseongbok@gmail.com</div>
     <div class="cta-btns">
       <a class="btn btn-gold" href="tel:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>전화 문의하기</a>
-      <a class="btn btn-sms" href="sms:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>문자 보내기</a>
+      <button type="button" class="btn btn-sms copy-mail" data-mail="sugarmanwork.sujiseongbok@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg><span>이메일 주소 복사</span></button>
     </div>
     <small>상담 후 방문(투어) 예약도 도와드립니다.</small>
   </div>
@@ -400,6 +408,7 @@
       <p>스카이캐슬 주식회사</p>
       <p>경기 용인시 수지구 성복2로 17 수지골드프라자 4층</p>
       <p>문의 0507-1494-2038</p>
+      <p>sugarmanwork.sujiseongbok@gmail.com</p>
     </div>
     <div class="foot-right">
       <a href="tel:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>0507-1494-2038</a>
@@ -411,7 +420,6 @@
 <!-- MOBILE STICKY BAR -->
 <div class="mbar">
   <a class="c" href="tel:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>전화 문의</a>
-  <a class="s" href="sms:+8250714942038"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>문자 보내기</a>
 </div>
 
 <!-- LIGHTBOX -->
@@ -430,6 +438,20 @@ addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>20));
 // reveal on scroll
 const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*60)+'ms';io.observe(el)});
+
+// copy email
+document.querySelectorAll('.copy-mail').forEach(b=>{
+  const label=b.querySelector('span'),mail=b.dataset.mail;
+  const legacy=()=>{const t=document.createElement('textarea');t.value=mail;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();let ok=false;try{ok=document.execCommand('copy')}catch(e){}t.remove();return ok};
+  b.addEventListener('click',async()=>{
+    let ok=false;
+    try{await navigator.clipboard.writeText(mail);ok=true}catch(e){ok=legacy()}
+    label.textContent=ok?'복사됨 · '+mail:mail;
+    b.classList.toggle('copied',ok);
+    clearTimeout(b._t);
+    b._t=setTimeout(()=>{label.textContent='이메일 주소 복사';b.classList.remove('copied')},2400);
+  });
+});
 
 // gallery filter
 const tabs=document.querySelectorAll('.tab');
